@@ -1,0 +1,68 @@
+<!--
+form_nostyle.htm  제작
+최소한 10개 이상(종류는 5개 이상)의 form element를 포함하는 form 페이지를 찾아서 페이지 내의 html 부분만 clone coding 할 것.
+예: https://getbootstrap.com/docs/5.2/examples/checkout/ 
+입력받을 항목의 element type
+필수 사용: text, radio, checkbox, select, date, textarea
+선택 사용: fieldset, legend, optgroup, color, datalist
+-->
+<!--사용자의 개인정보를 입력받는 구글폼 참고-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF_8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form No Style</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <form method="POST" action="form.html">
+        <!--get first name-->
+        <label for="input_firstname">이름</label> <br>
+        <input type="text" id="input_firstname" name="firstname"> <br>
+        <!--get last name-->
+        <label for="input_lastname">성</label> <br>
+        <input type="text" id="input_lastname" name="lastname"> <br><br>
+
+         <!--select gender-->
+        성별 <br>
+        <input type="radio" id="man" name="gender" checked> 
+        <label for="credit">남</label> <br>
+        <input type="radio" id="woman" name="gender"> 
+        <label for="debit">여</label> <br><br>
+
+        <!--select country-->
+        <label for="select_country">국가 선택</label> <br>
+        <select id="select_country" name="country">
+            <option value="choose">Choose..</option>
+            <option value="USA">United States</option>
+        </select> <br>
+
+
+
+        <!--checkbox-->
+        <input type="checkbox" id="check" name="check">
+        <label for = "check">Shipping address is the same as my billing address</label> <br>
+        <input type="checkbox" id="check" name="check2"> 
+        <label for = "check2">Save this information for next time</label> <br>
+        
+
+       
+
+
+        
+    
+
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+
+    </form>
+</body>
+
+</html>
