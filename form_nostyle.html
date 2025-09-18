@@ -22,71 +22,103 @@ form_nostyle.htm  제작
 </style>
 
 <body>
+    <div class="box top">
+        <h2>2025년도 TA신청을 위한 개인정보 입력</h2>
+        * 필수입력사항 <br><br>
+    </div>
     <form method="POST" action="form.html">
         <!--이름 입력-->
-        <label for="input_firstname">이름</label> <br>
-        <input type="text" id="input_firstname" name="firstname"> <br>
-        <!--성 입력-->
-        <label for="input_lastname">성</label> <br>
-        <input type="text" id="input_lastname" name="lastname"> <br><br>
+        <div class="box content">
+            <label for="input_name">이름 * </label> <br>
+            <input type="text" id="input_name" name="name" required> <br><br>
+        </div>
 
-         <!--성별 선택-->
-        성별 <br>
-        <input type="radio" id="man" name="gender" checked> 
-        <label for="credit">남</label> 
-        <input type="radio" id="woman" name="gender"> 
-        <label for="debit">여</label> <br><br>
+        <!--성별 선택-->
+        <div class="box content">
+            성별 * <br>
+            <input type="radio" id="man" name="gender" checked>
+            <label for="credit">남</label>
+            <input type="radio" id="woman" name="gender">
+            <label for="debit">여</label> <br><br>
+        </div>
 
         <!--생년월일 선택-->
-        <label for="birthday">생년월일</label>
-        <input type="date" id="birthday" name="birthday"> <br><br>
+        <div class="box content">
+            <label for="birthday">생년월일</label> <br>
+            <input type="date" id="birthday" name="birthday"> <br><br>
+        </div>
 
         <!--주민등록번호 입력-->
-        <label for="input_idnum">주민등록번호</label> <br>
-        <input type="text" id="input_idnum" name="idnum" maxlength="6" placeholder="생년월일">
-        <input type="password" id="input_idnum" name="idnum2" maxlength="7" placeholder="뒷 7자리 입력"> <br><br>
+        <div class="box content">
+            <label for="input_idnum">주민등록번호 *</label> <br>
+            <input type="text" id="input_idnum" name="idnum" maxlength="6" placeholder="생년월일" required>
+            <input type="password" id="input_idnum" name="idnum2" maxlength="7" placeholder="뒷 7자리 입력" required>
+            <br><br>
+        </div>
 
+        <div class="box content">
+            <!--국가 선택-->
+            <label for="select_country">국가 선택</label> <br>
+            <select id="select_country" name="country">
+                <option value="choose">Choose..</option>
+                <option value="USA">United States</option>
+                <option value="KOR">Korea</option>
+                <option value="JPN">Japan</option>
+                <option value="CHN">China</option>
+                <option value="ETC">etc</option>
+            </select> <br><br>
+        </div>
 
-        <!--국가 선택-->
-        <label for="select_country">국가 선택</label>
-        <select id="select_country" name="country">
-            <option value="choose">Choose..</option>
-            <option value="USA">United States</option>
-            <option value="KOR">Korea</option>
-            <option value="JPN">Japan</option>
-            <option value="CHN">China</option>
-            <option value="ETC">etc</option>
-        </select> <br><br>
-        
-        <!--주소 입력-->
-        <label for="input_address">주소 입력</label> <br>
-        <textarea id="input_address" name="address" rows="1" cols="50" placeholder="상세주소 입력"></textarea> <br><br>
+        <div class="box content">
+            <!--주소 입력-->
+            <label for="input_address">주소</label> <br>
+            <textarea id="input_address" name="address" rows="1" cols="50" placeholder="상세주소 입력"></textarea> <br><br>
+        </div>
 
-        <!--휴대폰 번호 입력-->
-        <label for="input_phone">휴대폰 번호</label> <br>
-        <input type="text" id="input_phone" name="phone" maxlength="11" placeholder="숫자만 입력"> <br><br>
+        <div class="box content">
+            <!--휴대폰 번호 입력-->
+            <label for="input_phone">휴대폰 번호 *</label> <br>
+            <input type="text" id="input_phone" name="phone" maxlength="11" placeholder="숫자만 입력" required> <br><br>
+        </div>
+
+        <div class="box content">
+            <!--계좌 정보-->
+            <label for="input_account">계좌 정보</label> <br>
+            <select>
+                <option value="choose">Choose..</option>
+                <option value="KB">국민은행</option>
+                <option value="NH">농협은행</option>
+                <option value="IBK">기업은행</option>
+                <option value="SH">신한은행</option>
+                <option value="WOORI">우리은행</option>
+                <option value="HANA">하나은행</option>
+                <option value="ETC">etc</option>
+            </select>
+            <input type="text" id="input_account" name="account" placeholder="계좌번호 입력"> <br><br>
+        </div>
 
 
         <!--이메일 입력-->
-        <label for="input_email">이메일</label> <br>
-        <input type="text" id="input_email" name="email" placeholder="example@domain.com"> <br><br>      
-
-        
-        <!--checkbox-->
-        <input type="checkbox" id="check" name="check">
-        <label for = "check">개인정보 활용 동의</label> <br>
-        <input type="checkbox" id="check" name="check2"> 
-        <label for = "check2">마케팅 및 수신광고 동의</label> <br><br>
-        
-
-       
+        <div class="box content">
+            <label for="input_email">이메일</label> <br>
+            <input type="text" id="input_email" name="email" placeholder="example@domain.com"> <br><br>
+        </div>
 
 
-        
-    
+        <div class="box content">
+            <!--checkbox-->
+            <input type="checkbox" id="check" name="check">
+            <label for="check">개인정보 활용 동의</label> <br>
+            <input type="checkbox" id="check" name="check2">
+            <label for="check2">마케팅 및 수신광고 동의</label> <br><br>
+        </div>
 
-        <input type="submit" value="제출">
-        <input type="reset" value="초기화">
+        <div class="bottom">
+            <!--제출 및 초기화 버튼-->
+            <input type="submit" value="제출">
+            <input type="reset" value="초기화">
+        </div>
+
 
     </form>
 </body>
