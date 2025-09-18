@@ -23,34 +23,60 @@ form_nostyle.htm  제작
 
 <body>
     <form method="POST" action="form.html">
-        <!--get first name-->
+        <!--이름 입력-->
         <label for="input_firstname">이름</label> <br>
         <input type="text" id="input_firstname" name="firstname"> <br>
-        <!--get last name-->
+        <!--성 입력-->
         <label for="input_lastname">성</label> <br>
         <input type="text" id="input_lastname" name="lastname"> <br><br>
 
-         <!--select gender-->
+         <!--성별 선택-->
         성별 <br>
         <input type="radio" id="man" name="gender" checked> 
-        <label for="credit">남</label> <br>
+        <label for="credit">남</label> 
         <input type="radio" id="woman" name="gender"> 
         <label for="debit">여</label> <br><br>
 
-        <!--select country-->
-        <label for="select_country">국가 선택</label> <br>
+        <!--생년월일 선택-->
+        <label for="birthday">생년월일</label>
+        <input type="date" id="birthday" name="birthday"> <br><br>
+
+        <!--주민등록번호 입력-->
+        <label for="input_idnum">주민등록번호</label> <br>
+        <input type="text" id="input_idnum" name="idnum" maxlength="6" placeholder="생년월일">
+        <input type="password" id="input_idnum" name="idnum2" maxlength="7" placeholder="뒷 7자리 입력"> <br><br>
+
+
+        <!--국가 선택-->
+        <label for="select_country">국가 선택</label>
         <select id="select_country" name="country">
             <option value="choose">Choose..</option>
             <option value="USA">United States</option>
-        </select> <br>
+            <option value="KOR">Korea</option>
+            <option value="JPN">Japan</option>
+            <option value="CHN">China</option>
+            <option value="ETC">etc</option>
+        </select> <br><br>
+        
+        <!--주소 입력-->
+        <label for="input_address">주소 입력</label> <br>
+        <textarea id="input_address" name="address" rows="1" cols="50" placeholder="상세주소 입력"></textarea> <br><br>
+
+        <!--휴대폰 번호 입력-->
+        <label for="input_phone">휴대폰 번호</label> <br>
+        <input type="text" id="input_phone" name="phone" maxlength="11" placeholder="숫자만 입력"> <br><br>
 
 
+        <!--이메일 입력-->
+        <label for="input_email">이메일</label> <br>
+        <input type="text" id="input_email" name="email" placeholder="example@domain.com"> <br><br>      
 
+        
         <!--checkbox-->
         <input type="checkbox" id="check" name="check">
-        <label for = "check">Shipping address is the same as my billing address</label> <br>
+        <label for = "check">개인정보 활용 동의</label> <br>
         <input type="checkbox" id="check" name="check2"> 
-        <label for = "check2">Save this information for next time</label> <br>
+        <label for = "check2">마케팅 및 수신광고 동의</label> <br><br>
         
 
        
