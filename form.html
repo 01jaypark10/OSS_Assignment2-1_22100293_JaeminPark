@@ -5,4 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form No Style</title>
 </head>
+
+<style> 
+button.blue {
+    background-color: rgb(17, 2, 245);
+    color: white;
+    border: none;
+}
+
+button.blue:hover {
+    background-color: rgb(93, 127, 236);
+    color: white;
+    border : none;
+}
+
+button.green {
+    background-color: rgb(93, 127, 36);
+    color: white;
+    border : none;
+}
+
+button.green:hover {
+    background-color: rgb(58, 157, 81);
+    color: white;
+    border : none;
+}
+
+</style>
+<body>
+<h1>Dynamic Web page</h1>
+
+<form method = "post">
+    <label for = "text"></label>
+    <input type = "text" id = "inputtext" name = "text">
+    <button type = "button" class = "blue" id = "addButton" onclick = "addItem()">추가</button>
+    <button type = "button" class = "green" id = "deleteButton" onclick = "deleteItem()">삭제</button>
+    <ul id = "itemList">
+
+    </ul>
+    
+</form>
+
+<script>
+    function addItem()
+    {
+        //text 입력창에서 사용자가 입력한 단어들을 가져옴
+        let items = document.getElementById("inputtext")
+
+        //item list를 불러옴
+        let itemList = document.getElementById("itemList")
+
+        //아이템이 여러개의 경우, 하나씩 저장하기 위해 사용하는 변수
+        let item;
+
+        //아이템이 여러개인 경우, 콤마를 기준으로 나누어 배열에 저장
+        let itemArr = items.value.split(",");
+
+        //아이템 배열에 담긴 모든 원소들을 itemList에 추가
+        for (let i = 0; i < itemArr.length; i++) {
+            //새 아이템 요소 생성
+            item = document.createElement("li")
+            //공백 제거
+            item.textContent = itemArr[i].trim();
+            //리스트에 새로운 아이템 추가
+            itemList.appendChild(item)
+        }
+        //입력창 비우기
+        items.value = "";
+    }
+
+    function deleteItem(){
+        let itemList = document.getElementById("itemList");
+        itemList.innerHTML = "";
+    }
+
+</script>
+
+</body>
 </html>
