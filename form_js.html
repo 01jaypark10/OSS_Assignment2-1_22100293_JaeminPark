@@ -242,11 +242,11 @@
             }
         }
 
-    //창에 마우스를 가져가면 hidingPlaceholder 클래스가 추가되면서 placeholder가 투명해짐
+    //창에 마우스를 가져가면 hidingPlaceholder 클래스가 추가되면서 placeholder의 값이 투명해짐
     function hidePlaceholder(element){
         element.classList.add("hidingPlaceholder");
     }
-    //창에서 마우스를 제거하면 hidingPlaceholder 클래스가 삭제되면서 placeholder가 다시 나타남
+    //창에서 마우스를 제거하면 hidingPlaceholder 클래스가 삭제되면서 placeholder가 다시 불투명해짐
     function displayPlaceholder(element){
         element.classList.remove("hidingPlaceholder");
     }
